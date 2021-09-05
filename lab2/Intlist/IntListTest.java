@@ -1,8 +1,11 @@
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class IntListTest {
+
+    //private ProcessHandle IntList;
 
     /**
      * Example test that verifies correctness of the IntList.of static
@@ -42,7 +45,7 @@ public class IntListTest {
 
     @Test
     public void testSquareListRecursive() {
-        IntList L = IntList.of(1, 2, 3);
+        IntList L = IntList.of(1,2,3);
         IntList res = IntList.squareListRecursive(L);
         assertEquals(IntList.of(1, 2, 3), L);
         assertEquals(IntList.of(1, 4, 9), res);
@@ -67,3 +70,7 @@ public class IntListTest {
     }
 
 }
+
+
+
+

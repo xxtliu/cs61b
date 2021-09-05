@@ -1,3 +1,4 @@
+
 import java.util.Formatter;
 
 /**
@@ -8,6 +9,7 @@ import java.util.Formatter;
  *         [Do not modify this file.]
  */
 public class IntList {
+
     /**
      * First element of list.
      */
@@ -82,7 +84,13 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        if (A == null) {
+            return B;
+        } else {
+            A.rest = dcatenate(A.rest, B);
+        }
+        return A;
+       // return null;
     }
 
     /**
@@ -91,22 +99,13 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        if (A == null) {
+            return B;
+        } else {
+            return new IntList(A.first, catenate(A.rest, B));
+        }
+        //return null;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**
@@ -230,5 +229,8 @@ public class IntList {
         out.format(")");
         return out.toString();
     }
+
 }
+
+
 
